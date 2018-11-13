@@ -16976,6 +16976,7 @@ General-purpose diode for high-speed switching</description>
 <part name="SUPPLY1" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY2" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY6" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="JP3" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2"/>
 </parts>
 <sheets>
 <sheet>
@@ -16998,6 +16999,7 @@ General-purpose diode for high-speed switching</description>
 <wire x1="20.32" y1="88.9" x2="-25.4" y2="88.9" width="0.6096" layer="94"/>
 <text x="-27.94" y="91.44" size="3.81" layer="94">Microphone Connectors</text>
 <text x="40.64" y="-40.64" size="1.778" layer="94">Speaker out</text>
+<text x="-94.996" y="54.864" size="1.778" layer="94">Debug</text>
 </plain>
 <instances>
 <instance part="CODEC" gate="G$1" x="0" y="0" smashed="yes">
@@ -17135,6 +17137,10 @@ General-purpose diode for high-speed switching</description>
 <instance part="SUPPLY6" gate="GND" x="-88.9" y="-58.42" smashed="yes">
 <attribute name="VALUE" x="-90.805" y="-61.595" size="1.778" layer="96"/>
 </instance>
+<instance part="JP3" gate="G$1" x="-93.98" y="50.8" smashed="yes" rot="R180">
+<attribute name="NAME" x="-87.63" y="45.085" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-87.63" y="55.88" size="1.778" layer="96" rot="R180"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -17167,6 +17173,11 @@ General-purpose diode for high-speed switching</description>
 <wire x1="-38.1" y1="30.48" x2="-38.1" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="-38.1" y1="27.94" x2="-83.82" y2="27.94" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="JP3" gate="G$1" pin="2"/>
+<wire x1="-91.44" y1="50.8" x2="-86.36" y2="50.8" width="0.1524" layer="91"/>
+<label x="-86.36" y="50.8" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="D-" class="0">
 <segment>
@@ -17175,6 +17186,11 @@ General-purpose diode for high-speed switching</description>
 <pinref part="R2" gate="G$1" pin="1"/>
 <label x="-40.64" y="25.4" size="1.778" layer="95"/>
 <wire x1="-83.82" y1="25.4" x2="-33.02" y2="25.4" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="JP3" gate="G$1" pin="1"/>
+<wire x1="-91.44" y1="48.26" x2="-86.36" y2="48.26" width="0.1524" layer="91"/>
+<label x="-86.36" y="48.26" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -17536,7 +17552,9 @@ General-purpose diode for high-speed switching</description>
 </sheet>
 </sheets>
 <errors>
-<approved hash="106,1,17.78,30.48,N$14,,,,,"/>
+<approved hash="113,1,45.9571,-32.7939,JP1,,,,,"/>
+<approved hash="113,1,2.30293,76.4261,JP2,,,,,"/>
+<approved hash="113,1,-91.6771,48.0339,JP3,,,,,"/>
 </errors>
 </schematic>
 </drawing>
